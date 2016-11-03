@@ -53,9 +53,9 @@ if "double_pendulum" in problems:
 if "fourbar1" in problems:
     schemes['fourbar1'] = ["0", "1", "2.05", "2.10", "2.20", "3",
                            "4.05", "4.10", "4.20", "4.30", "4.40"]
-if "dist" in problems: # Exclude scheme 0
-    schemes['dist'] = ["1", "2.05", "2.10", "2.20", "2.30", "2.40",
-                        "3", "4.05", "4.10", "4.20", "4.30", "4.40"]
+if "dist" in problems:
+    schemes['dist'] = ["0", "1", "2.05", "2.10", "2.20", "2.30", "2.40",
+                       "3", "4.05", "4.10", "4.20", "4.30", "4.40"]
 
 # Load existing stats file
 if old_stats_file is None:
