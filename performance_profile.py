@@ -5,7 +5,8 @@ problem.
 Some schemes are identical for some problems. This information is hardcoded manually for each problem and scheme.
 Consequently, some extra effort is required to try new values of the density tolerance.
 
-The stats files used to create the published performance profiles are used by default.
+The stats files used to create the published performance profiles are used by default, albeit without the HRSG
+results.
 """
 
 ######################################################## Setup #########################################################
@@ -75,8 +76,6 @@ if "ccpp" in stats_files:
 if "fourbar1" in stats_files:
     statses["fourbar1"]["2.30"] = statses["fourbar1"]["1"]
     statses["fourbar1"]["2.40"] = statses["fourbar1"]["1"]
-if "dist" in stats_files:
-    statses["dist"]["0"] = 1000*[("Fail", np.nan, np.nan, np.inf)]
 if "double_pendulum" in stats_files:
     statses["double_pendulum"]["2.10"] = statses["double_pendulum"]["1"]
     statses["double_pendulum"]["2.20"] = statses["double_pendulum"]["1"]
