@@ -19,7 +19,7 @@ vice versa. The numbering in the performance profile legend are however consiste
 ################################################### Benchmark setup ####################################################
 n_runs = 10 # Number of instances per problem
 old_stats_file = None # Set an old stats file to continue appending results to it
-problems = ["dist"] # Possible values: car, ccpp, double_pendulum, fourbar1, dist4
+problems = ["dist"] # Possible values: car, ccpp, double_pendulum, fourbar1, dist
 ########################################################################################################################
 
 try:
@@ -469,7 +469,7 @@ for problem in problems:
         class_name = "JMExamples_opt.Distillation4_Opt"
         file_paths = (os.path.join(get_files_path(), "JMExamples.mo"),
                       os.path.join(get_files_path(), "JMExamples_opt.mop"))
-        init_res[problem] = LocalDAECollocationAlgResult(result_data=ResultDymolaTextual('sols/dist4_sol.txt'))
+        init_res[problem] = LocalDAECollocationAlgResult(result_data=ResultDymolaTextual('sols/dist_sol.txt'))
         opt_opts['init_traj'] = init_res[problem]
         opt_opts['nominal_traj'] = init_res[problem]
         opt_opts['IPOPT_options']['max_cpu_time'] = 40
